@@ -15,7 +15,7 @@ function crypt(x) {
       specialChar()
       switch (true) {
          case charCode >= 97 && charCode <= 122:
-            charCode = target.value.toUpperCase().charCodeAt(i)
+            charCode = String.fromCharCode(charCode).toUpperCase().charCodeAt(0)
             output += String.fromCharCode(cryptChar(key() * x)).toLowerCase()
             break
          case charCode >= 65 && charCode <= 90:
