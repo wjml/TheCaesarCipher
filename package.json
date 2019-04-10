@@ -1,0 +1,24 @@
+{
+  "name": "thecaesarcipher",
+  "version": "1.0.0",
+  "description": "Desenvolvido para a disciplina de Segurança da Informação do 7° semestre do Ensino Médio Integrado ao Técnico em Informática - IFMS 2019.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjml/TheCaesarCipher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wjml/TheCaesarCipher/issues"
+  },
+  "homepage": "https://github.com/wjml/TheCaesarCipher#readme"
+}
