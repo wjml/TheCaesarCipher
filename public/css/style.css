@@ -1,25 +1,115 @@
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.5;
+  font-size: 24px;
+}
+
 body {
-   font-family: Nunito;
-   text-align: center;
-   margin: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: #0f0f0f;
+  color: white;
+}
+
+html, body {
+  height: 100%;
+}
+
+input, textarea {
+  font-family: inherit;
+  line-height: inherit;
+  color: #2e3750;
+  min-width: 20em;
+  font-size: 1rem;
+}
+
+textarea {
+  width: 200px;
+}
+
+.content {
+  border-radius: 20px;
+  box-shadow: 3px -3px 20px #1bea78;
 }
 
 .app {
-   display: flex;
-   flex-direction: column;
-   padding: 2rem;
-   align-items: center;
+  margin: 30px;
+  padding: 5px;
 }
 
-.app .io, .app .buttons {
-   display: flex;
-   flex-direction: row;
+.io {
+  display: flex;
 }
 
-.app .io #input {
-   border-radius: 7px 0 0 7px;
+::placeholder {
+  color: #cbd0d5;
 }
 
-.app .io #output {
-   border-radius: 0 7px 7px 0;
+header, footer {
+  background: linear-gradient(21deg, #10ffeb, #1bea78);
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+}
+
+.input {
+  position: relative;
+  font-size: 3.5em;
+  background: linear-gradient(21deg, #10ffeb, #1bea78);
+  padding: 3px;
+  display: inline-block;
+}
+
+.input.left {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.input.right {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.input *:not(span) {
+  position: relative;
+  display: inherit;
+  border-radius: inherit;
+  margin: 0;
+  border: none;
+  outline: none;
+  padding: 0 0.325em;
+  z-index: 1;
+}
+
+.input *:not(span):focus+span {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.input span {
+  transform: scale(0.993, 0.94);
+  transition: transform 0.5s, opacity 0.25s;
+  opacity: 0;
+  position: absolute;
+  z-index: 0;
+  margin: 4px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 15px #1bea78, -3px 3px 15px #10ffeb;
 }

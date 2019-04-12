@@ -5,25 +5,35 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link href="css/style.css" rel="stylesheet">
-   <link
-      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-      rel="stylesheet">
    <title>The Caesar Cipher</title>
 </head>
 
 <body>
    <header>
-      <h1>The Caesar Cipher</h1>
    </header>
    <div class="content">
       <div class="app">
-         <input type="number" id="key">
-         <div class="IO">
-            <input onkeyup="crypt(1)" type="text" id="encrypt">
-            <input onkeyup="crypt(-1)" type="text" id="decrypt">
+         <h1>
+            The Caesar Cipher
+         </h1>
+         <p>
+            Key:
+            <span class="input right">
+               <input type="number" id="key">
+               <span></span>
+            </span>
+         </p>
+         <div class="io">
+            <span class="input left">
+               <textarea rows="5" onkeyup="crypt(1)" type="text" id="encrypt" placeholder="Encrypt"></textarea>
+               <span></span>
+            </span>
+            <span class=" input right">
+               <textarea rows="5" onkeyup="crypt(-1)" type="text" id="decrypt" placeholder="Decrypt"></textarea>
+               <span></span>
+            </span>
          </div>
       </div>
-
    </div>
    <footer></footer>
 
